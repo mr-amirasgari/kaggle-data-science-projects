@@ -1,0 +1,1 @@
+Copy .github/workflows/deploy-pages.yml from this package to the ROOT of your kaggle-data-science-projects repository.

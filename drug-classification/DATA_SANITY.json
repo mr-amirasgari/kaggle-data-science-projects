@@ -1,0 +1,14 @@
+{
+  "rows": 200,
+  "class_counts": {
+    "drugY": 91,
+    "drugC": 16,
+    "drugX": 54,
+    "drugA": 23,
+    "drugB": 16
+  },
+  "age_min": 15,
+  "age_max": 74,
+  "na_to_k_min": 6.269,
+  "na_to_k_max": 38.247
+}
