@@ -2,7 +2,8 @@ name: Deploy Drug Dashboard to Pages
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -11,37 +12,49 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: true
 
 jobs:
   deploy:
+    runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+
     defaults:
       run:
-        working-directory: drug-classification/dashboard
+        working-directory: drug-classification
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@v6
+
       - name: Setup Node
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@v4
         with:
-          node-version: lts/*
+          node-version: 22
+          cache: npm
+          cache-dependency-path: drug-classification/package-lock.json
+
       - name: Install dependencies
-        run: npm install
-      - name: Test
+        run: npm ci
+
+      - name: Run tests
         run: npm test
+
       - name: Build
         run: npm run build
-      - name: Setup Pages
-        uses: actions/configure-pages@v6
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v5
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: drug-classification/dashboard/dist
-      - name: Deploy
+          path: drug-classification/dist
+
+      - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v4
