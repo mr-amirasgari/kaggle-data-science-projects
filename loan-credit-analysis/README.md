@@ -1,240 +1,334 @@
 # Loan Credit Analysis
 
-A machine learning project for analyzing borrower characteristics and predicting whether a loan will be **not fully paid**.
+An end-to-end machine learning project for analyzing borrower characteristics and predicting whether a loan will **not be fully paid**.
 
-> **Disclaimer:** This project is for educational and portfolio purposes only. It should not be used as the sole basis for real lending or credit decisions.
+The project focuses on **imbalanced binary classification**, model comparison, class-imbalance handling with SMOTE, and minority-class evaluation.
+
+## 🌐 Live Demo
+
+👉 **[Open Interactive Loan Credit Analysis Dashboard](https://mr-amirasgari.github.io/kaggle-data-science-projects/loan-credit-analysis/)**
+
+The dashboard provides an interactive, portfolio-ready interface for exploring the project, model results, class-imbalance strategy, and credit-risk scenarios.
+
+---
 
 ## Project Overview
 
-The project explores a structured loan dataset, prepares the data for modeling, compares multiple classification algorithms, and examines the effect of class imbalance on model performance.
+Loan default prediction is an imbalanced classification problem in which the positive/default class is typically much less frequent than the negative class.
+
+Because of this imbalance, overall accuracy alone may provide a misleading picture of model performance.
+
+This project therefore focuses on metrics such as:
+
+- Recall
+- F1 Score
+- Minority-class performance
+- Model behavior before and after imbalance handling
 
 The workflow includes:
 
-- Data inspection and quality checks
-- Exploratory data analysis
-- Feature binning and transformation
-- Correlation analysis
-- Categorical encoding
-- Feature scaling
-- Binary classification
-- Model comparison
-- Class-imbalance treatment using SMOTE
+1. Data loading and inspection
+2. Data cleaning
+3. Exploratory data analysis
+4. Feature transformation
+5. Train/test preparation
+6. Baseline classification
+7. Model comparison
+8. Class-imbalance analysis
+9. SMOTE oversampling
+10. Final evaluation
 
-## Dataset
-
-The notebook uses the Kaggle dataset:
-
-```text
-mramirasgari/loan-data
-```
-
-The dataset contains **9,578 records** and **14 original columns**.
-
-| Feature | Description |
-|---|---|
-| `credit.policy` | Whether the borrower meets the lender's credit policy |
-| `purpose` | Purpose of the loan |
-| `int.rate` | Loan interest rate |
-| `installment` | Monthly installment amount |
-| `log.annual.inc` | Natural logarithm of annual income |
-| `dti` | Debt-to-income ratio |
-| `fico` | Borrower's FICO credit score |
-| `days.with.cr.line` | Length of the borrower's credit history |
-| `revol.bal` | Revolving credit balance |
-| `revol.util` | Revolving credit utilization rate |
-| `inq.last.6mths` | Credit inquiries during the previous six months |
-| `delinq.2yrs` | Delinquencies during the previous two years |
-| `pub.rec` | Number of derogatory public records |
-| `not.fully.paid` | Target indicating whether the loan was not fully paid |
-
-No missing values were detected.
-
-## Target Variable
-
-The target is:
-
-```text
-not.fully.paid
-```
-
-- `False` or `0`: the loan was fully paid
-- `True` or `1`: the loan was not fully paid
-
-Approximately **16%** of the records belong to the positive class, which makes the dataset imbalanced.
-
-## Exploratory Data Analysis
-
-The notebook includes:
-
-- Dataset structure and descriptive statistics
-- Missing-value checks
-- Frequency and percentage tables
-- Bar charts for categorical variables
-- Histograms for numerical variables
-- Spearman correlation analysis
-- A correlation heatmap
-- Inspection of invalid credit-utilization values
-- Analysis of skewed revolving-balance values
-
-One notable relationship is the strong negative Spearman correlation between interest rate and FICO score.
-
-## Data Preparation
-
-The following preprocessing steps were applied:
-
-### Type Conversion
-
-`credit.policy` and `not.fully.paid` were converted to Boolean values.
-
-### Feature Binning
-
-The following count variables were grouped into categorical bins:
-
-- `inq.last.6mths`
-- `delinq.2yrs`
-- `pub.rec`
-
-### Data Cleaning
-
-Values of `revol.util` above 100 were capped at 100.
-
-### Log Transformation
-
-A log-transformed revolving-balance feature was created:
-
-```text
-log_revol_bal = log(1 + revol.bal)
-```
-
-### Categorical Encoding
-
-- The `purpose` feature was one-hot encoded.
-- The custom bin features were label encoded.
-
-### Feature Removal
-
-After creating transformed versions, the original columns below were removed:
-
-- `revol.bal`
-- `inq.last.6mths`
-- `delinq.2yrs`
-- `pub.rec`
-
-## Train-Test Split
-
-The data was divided into:
-
-- **80% training data:** 7,662 records
-- **20% testing data:** 1,916 records
-- `random_state=42`
-
-Numerical features were standardized using `StandardScaler`, fitted only on the training set.
+---
 
 ## Machine Learning Models
 
-Three classification algorithms were compared:
+Three classification algorithms are investigated:
+
+### Logistic Regression
+
+Used as an interpretable baseline classifier and later retrained after applying SMOTE.
+
+### Random Forest
+
+Used as a non-linear tree-based ensemble model capable of capturing more complex relationships between borrower features.
+
+### XGBoost
+
+Used as a boosted-tree model for comparison with Logistic Regression and Random Forest.
+
+---
+
+## Class Imbalance
+
+One of the central challenges of the dataset is the imbalance between the two target classes.
+
+A model can obtain relatively high accuracy simply by favoring the majority class while performing poorly on the minority class.
+
+To address this issue, the project applies:
+
+### SMOTE — Synthetic Minority Over-sampling Technique
+
+SMOTE generates synthetic examples of the minority class in the training data.
+
+The objective is to provide the classifier with a more balanced training signal and improve its ability to identify minority-class observations.
+
+---
+
+## Key Result
+
+The Logistic Regression model after applying SMOTE achieved:
+
+| Metric | Result |
+|---|---:|
+| Recall | **44.59%** |
+| F1 Score | **0.3309** |
+
+The result demonstrates the importance of evaluating an imbalanced classification problem using metrics beyond simple accuracy.
+
+---
+
+## Interactive Dashboard
+
+The project includes a responsive dashboard built with:
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn-inspired UI
+- Recharts
+- Vitest
+- GitHub Pages
+
+### Dashboard Sections
+
+#### Overview
+
+Provides a high-level summary of the machine learning project, models, reported metrics, and analysis workflow.
+
+#### Credit Risk Scenario Analyzer
+
+An interactive interface for exploring how common lending-related variables can affect a transparent risk scenario.
+
+Inputs include:
+
+- Annual income
+- Loan amount
+- Loan term
+- Debt-to-income ratio
+- Credit history
+- Employment duration
+
+The analyzer provides:
+
+- Risk score
+- Risk band
+- Contributing risk factors
+- Transparent explanation of the result
+
+> **Important:** The interactive scenario analyzer is an educational browser-side scoring tool. It is not the fitted machine learning model from the notebook and is not presented as a real credit-scoring system.
+
+#### Model Lab
+
+Presents the machine learning algorithms evaluated in the project:
 
 - Logistic Regression
 - Random Forest
 - XGBoost
 
-Evaluation metrics included:
+Only metrics explicitly reported by the project are displayed.
 
-- Accuracy
-- Precision
-- Recall
-- F1 score
-- ROC-AUC
-- Confusion matrix
+#### Class Imbalance
 
-## Results Before SMOTE
+Explains:
 
-| Model | Accuracy | Precision | Recall | F1 Score | ROC-AUC |
-|---|---:|---:|---:|---:|---:|
-| Logistic Regression | 0.8403 | 0.4615 | 0.0197 | 0.0377 | 0.7050 |
-| Random Forest | 0.8382 | 0.3684 | 0.0230 | 0.0432 | 0.6672 |
-| XGBoost | 0.8205 | 0.3107 | 0.1049 | 0.1569 | 0.6338 |
+- Majority vs minority classes
+- Why accuracy may be misleading
+- How SMOTE works
+- Why Recall and F1 Score matter
 
-Although accuracy was relatively high, recall for the minority class was very low. This shows why accuracy alone is not sufficient for evaluating an imbalanced classification problem.
+#### About
 
-## Handling Class Imbalance
+Provides information about the project methodology, technologies, repository, and deployment architecture.
 
-SMOTE was applied only to the training data to generate synthetic samples for the minority class.
-
-## Results After SMOTE
-
-| Model | Accuracy | Precision | Recall | F1 Score | ROC-AUC |
-|---|---:|---:|---:|---:|---:|
-| Logistic Regression | 0.7129 | 0.2631 | 0.4459 | 0.3309 | 0.6665 |
-| Random Forest | 0.8043 | 0.2866 | 0.1541 | 0.2004 | 0.6570 |
-| XGBoost | 0.8022 | 0.2771 | 0.1508 | 0.1953 | 0.6290 |
-
-After SMOTE, Logistic Regression achieved the highest recall and F1 score for identifying loans that were not fully paid. This improvement came with a reduction in overall accuracy.
-
-## Key Findings
-
-- The target variable is substantially imbalanced.
-- High accuracy before resampling hides weak minority-class detection.
-- Logistic Regression produced the best ROC-AUC before SMOTE.
-- SMOTE greatly improved Logistic Regression recall.
-- Model selection should depend on the cost of missing a risky loan versus incorrectly flagging a fully paid loan.
-
-## Technologies Used
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- SciPy
-- Scikit-learn
-- Imbalanced-learn
-- XGBoost
-- Jupyter Notebook
-- Kaggle
+---
 
 ## Repository Structure
 
 ```text
 loan-credit-analysis/
+│
 ├── loan-credit-analysis.ipynb
-└── README.md
+├── README.md
+│
+├── index.html
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── vite.config.ts
+│
+├── src/
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── index.css
+│   │
+│   ├── components/
+│   │   ├── dashboard/
+│   │   └── ui/
+│   │
+│   ├── lib/
+│   │   ├── riskAnalyzer.ts
+│   │   └── utils.ts
+│   │
+│   └── test/
+│       └── riskAnalyzer.test.ts
+│
+└── docs/
 ```
 
-## Running the Project
+---
 
-Install the required libraries:
+## Run the Dashboard Locally
+
+Clone the repository:
 
 ```bash
-pip install pandas numpy matplotlib seaborn scipy scikit-learn imbalanced-learn xgboost
+git clone https://github.com/mr-amirasgari/kaggle-data-science-projects.git
 ```
 
-The notebook was originally developed on Kaggle. When running it locally, update the CSV file path to match the local dataset location.
+Navigate to the project:
 
-## Key Learning Outcomes
+```bash
+cd kaggle-data-science-projects/loan-credit-analysis
+```
 
-This project demonstrates how to:
+Install dependencies:
 
-- Inspect and clean structured credit data
-- Transform skewed numerical variables
-- Bin sparse count features
-- Encode categorical variables
-- Scale numerical features without fitting on test data
-- Train and compare binary classification models
-- Evaluate models with metrics appropriate for imbalanced data
-- Apply SMOTE only to the training set
-- Interpret the trade-off between accuracy, precision, and recall
+```bash
+npm install
+```
 
-## Future Improvements
+Start the development server:
 
-Possible improvements include:
+```bash
+npm run dev
+```
 
-- Using a stratified train-test split
-- Creating a preprocessing and modeling pipeline
-- Applying cross-validation
-- Comparing class weighting with SMOTE
-- Tuning the classification threshold
-- Reporting precision-recall AUC
-- Performing hyperparameter optimization
-- Adding feature-importance and model-explanation methods
-- Evaluating probability calibration
+Run tests:
+
+```bash
+npm test
+```
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+---
+
+## Tests
+
+The frontend contains automated tests for the Credit Risk Scenario Analyzer.
+
+The tests cover:
+
+- Low-risk scenarios
+- High-risk scenarios
+- Invalid input handling
+
+Run them with:
+
+```bash
+npm test
+```
+
+---
+
+## Deployment
+
+The dashboard is deployed using **GitHub Pages** and **GitHub Actions**.
+
+Live version:
+
+**https://mr-amirasgari.github.io/kaggle-data-science-projects/loan-credit-analysis/**
+
+The repository uses a multi-dashboard deployment workflow so that individual data science projects can be exposed through separate paths under the same GitHub Pages site.
+
+---
+
+## Technologies
+
+### Data Science
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Logistic Regression
+- Random Forest
+- XGBoost
+- SMOTE
+- Jupyter Notebook
+
+### Dashboard
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Recharts
+- Vitest
+- GitHub Actions
+- GitHub Pages
+
+---
+
+## Disclaimer
+
+This project is developed for **educational, analytical, and portfolio purposes only**.
+
+Neither the machine learning analysis nor the interactive dashboard should be used as the sole basis for:
+
+- Lending decisions
+- Credit approval
+- Financial decisions
+- Real-world credit scoring
+
+The interactive Credit Risk Scenario Analyzer is a demonstration tool and does not represent a production lending model.
+
+---
+
+## Source Code
+
+GitHub Repository:
+
+**https://github.com/mr-amirasgari/kaggle-data-science-projects**
+
+Project Folder:
+
+**https://github.com/mr-amirasgari/kaggle-data-science-projects/tree/main/loan-credit-analysis**
+
+---
+
+## Related Projects
+
+This repository also includes additional end-to-end data science projects covering:
+
+- Drug Classification
+- Retail Store Sales Analysis
+- Regression
+- Classification
+- Exploratory Data Analysis
+- Imbalanced Learning
+
+---
+
+⭐ If you find this project useful, consider starring the repository.
