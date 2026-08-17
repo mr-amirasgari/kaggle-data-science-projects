@@ -1,8 +1,0 @@
-Copy the contents of this package into your existing:
-kaggle-data-science-projects/loan-credit-analysis/
-
-IMPORTANT:
-1) Do not overwrite your existing notebook.
-2) Merge README_DASHBOARD_SECTION.md into your existing README.md.
-3) Copy .github/workflows/deploy-pages.yml to the REPOSITORY ROOT:
-   kaggle-data-science-projects/.github/workflows/deploy-pages.yml
