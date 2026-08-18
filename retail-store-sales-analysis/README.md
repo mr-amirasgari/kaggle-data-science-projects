@@ -1,259 +1,153 @@
 # Retail Store Sales Analysis
 
-A data analysis and introductory machine learning project that explores retail store characteristics, cleans the dataset, creates performance indicators, and predicts store revenue using linear regression.
+An end-to-end retail analytics and regression project that explores store performance, cleans inconsistent categories, engineers revenue-efficiency metrics, and predicts store revenue with leakage-safe machine-learning pipelines.
+
+## 🌐 Live Demo
+
+👉 [Open Retail Store Sales Dashboard](https://mr-amirasgari.github.io/kaggle-data-science-projects/retail-store-sales-analysis/)
 
 ## Project Overview
 
-This project analyzes a retail store dataset containing information about store size, property status, store type, age category, checkout capacity, and revenue.
+The dataset contains **118 stores** with information about store area, property arrangement, store type, old/new status, checkout capacity, and revenue. The project combines business-oriented EDA with a stronger regression workflow than the original two-feature baseline.
 
-The workflow includes:
+The final workflow includes:
 
-- Data loading and inspection
-- Missing-value and duplicate checks
-- Data cleaning and type conversion
-- Feature engineering
-- Exploratory data analysis
-- Store-level performance comparisons
-- Revenue prediction with linear regression
-- Model evaluation and coefficient interpretation
+- data-quality checks and categorical label cleaning;
+- revenue conversion and `RevToArea` feature engineering;
+- store and category performance analysis;
+- leakage-safe preprocessing with `ColumnTransformer` and `Pipeline`;
+- numerical median imputation inside training folds;
+- one-hot encoding of categorical variables;
+- 5-fold cross-validation across multiple regression models;
+- MAE, RMSE, and R² evaluation;
+- residual analysis and coefficient inspection;
+- an interactive React dashboard with a portfolio revenue estimator.
 
 ## Dataset
 
-The notebook uses the Kaggle dataset:
-
-```text
-mramirasgari/stores
-```
-
-The original dataset contains **118 stores** and **7 columns**.
+Kaggle dataset: `mramirasgari/stores`
 
 | Feature | Description |
 |---|---|
-| `Store Number` | Unique identifier for each store |
+| `Store Number` | Store identifier |
 | `AreaStore` | Store area |
-| `Property` | Property or ownership arrangement |
-| `Type` | Store format, such as Express, Extra, or Hyper |
-| `Old/New` | Whether the store is categorized as old or new |
+| `Property` | Property/ownership arrangement |
+| `Type` | Express, Extra, or Hyper |
+| `Old/New` | Store age category |
 | `Checkout Number` | Number of checkout counters |
-| `Revenue` | Store revenue |
+| `Revenue` | Recorded store revenue |
 
-## Data Quality Checks
+### Data-quality findings
 
-The initial inspection found:
-
-- **118 rows**
-- **7 original columns**
+- **118 rows × 7 original columns**
 - **12 missing values** in `Checkout Number`
-- **No duplicated rows**
-- `Revenue` initially stored as text because it contained comma separators
+- **0 duplicated rows**
+- trailing whitespace in `Property` and `Old/New`
+- `Revenue` originally stored as formatted text
 
-The categorical columns also contain formatting inconsistencies such as extra spaces in some labels. Standardizing these values would improve future analysis.
+## Business Insights
 
-## Data Cleaning
+- Total recorded revenue: **2,713,770,000**
+- Median store revenue: **13,584,750**
+- Highest-revenue store: **Store 44 — 100,083,000**
+- Highest revenue per area: **Store 53 — 110,817.07**
+- Hyper stores lead in total and average revenue.
+- Express stores have the highest median revenue per unit of area among the three store types.
 
-The following cleaning steps were applied:
+`RevToArea = Revenue / AreaStore` is used only for business analysis. It is intentionally excluded from the prediction model because it is derived from the target.
 
-### Revenue Conversion
+## Revenue Modeling
 
-Comma separators were removed from `Revenue`, and the column was converted from text to a numeric data type.
-
-### Missing-Value Treatment
-
-Missing values in `Checkout Number` were filled with its median value:
-
-```text
-Median checkout count = 4
-```
-
-### Store Index
-
-`Store Number` was set as the DataFrame index to make store-level lookup and comparison easier.
-
-## Feature Engineering
-
-A new performance metric called `RevToArea` was created:
-
-```text
-RevToArea = Revenue / AreaStore
-```
-
-This feature measures the amount of revenue generated per unit of store area and allows stores of different sizes to be compared more fairly.
-
-## Exploratory Data Analysis
-
-The notebook includes:
-
-- Numerical and categorical descriptive statistics
-- Distribution of store types
-- Revenue distribution with a histogram and KDE curve
-- Comparison of selected store areas
-- Property-category frequency analysis
-- Identification of the store with the highest revenue per unit of area
-- Ranking functions for finding the highest-revenue stores within a selected group
-
-## Selected Findings
-
-### Store Area Comparison
-
-- Store 5 area: **220**
-- Store 117 area: **200**
-- Store 5 has the larger area.
-
-### Most Common Property Category
-
-The most frequent displayed property category was:
-
-```text
-Owned
-```
-
-Some category labels contain extra spaces, so category cleaning should be completed before treating the counts as final.
-
-### Highest Revenue per Unit of Area
-
-Store **53** had the highest `RevToArea` value:
-
-```text
-110,817.07
-```
-
-Its recorded characteristics were:
-
-| Feature | Value |
-|---|---|
-| Store area | 82 |
-| Property | Owned |
-| Type | Express |
-| Old/New | New |
-| Checkout count | 2 |
-| Revenue | 9,087,000 |
-
-## Custom Ranking Function
-
-The notebook defines a reusable function:
-
-```python
-top_n_revenue_in_k_stores(N, K)
-```
-
-It returns the top `N` stores by revenue among the first `K` stores while validating the input values.
-
-Example analyses include:
-
-- Top 5 revenue stores among the first 20 stores
-- Top 10 revenue stores among the first 50 stores
-
-## Revenue Prediction
-
-A Linear Regression model was trained to predict `Revenue`.
-
-### Input Features
-
-The model used:
+The model uses:
 
 - `AreaStore`
 - `Checkout Number`
+- `Property`
+- `Type`
+- `Old/New`
 
-`RevToArea` was intentionally excluded because it is calculated using the target variable and would cause data leakage.
+The preprocessing pipeline performs median imputation and standardization for numerical variables and one-hot encoding for categorical variables. All learned preprocessing steps are fit inside each training fold.
 
-### Train-Test Split
+### 5-Fold Cross-Validation
 
-The data was divided into:
+| Model | CV MAE | CV RMSE | Mean CV R² |
+|---|---:|---:|---:|
+| Ridge Regression | **8.69M** | **12.06M** | **0.572** |
+| Extra Trees | 8.79M | 12.58M | 0.546 |
+| Linear Regression | 8.58M | 12.25M | 0.545 |
 
-- **80% training data:** 94 stores
-- **20% testing data:** 24 stores
-- `random_state=42`
+Ridge Regression was selected by mean cross-validated R².
 
-The two input features were standardized using `StandardScaler`, fitted only on the training data.
+### Fixed Holdout Snapshot
 
-### Model Result
+Using an 80/20 split with `random_state=42`, the selected Ridge pipeline achieved:
 
-The model achieved:
+- **MAE:** 8.98M
+- **RMSE:** 14.14M
+- **R²:** 0.394
 
-```text
-R² = 0.3639
-```
+The holdout split is reported as a concrete snapshot; model selection is based on cross-validation because the dataset is small.
 
-This means the model explained approximately **36.4%** of the variation in store revenue on the test set.
+## Interactive Dashboard
 
-The result suggests that store area and checkout count provide some predictive information, but they are not sufficient to explain most revenue differences.
+The dashboard includes:
 
-## Model Coefficients
+- **Overview** — portfolio KPIs and category revenue summaries
+- **Store Explorer** — searchable/filterable view of all 118 stores
+- **Performance** — revenue vs. area, top stores, and efficiency analysis
+- **Revenue Model** — model comparison plus an interactive Ridge-based revenue estimator
+- **About** — methodology, caveats, and project links
 
-Because the features were standardized, the coefficients represent the expected revenue change associated with a one-standard-deviation increase in each feature.
-
-| Feature | Coefficient |
-|---|---:|
-| `AreaStore` | 4,964,972 |
-| `Checkout Number` | 12,985,550 |
-
-Within this model, checkout count had the larger coefficient. These coefficients describe association within the fitted model and should not be interpreted as causal effects.
-
-## Technologies Used
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- Jupyter Notebook
-- Kaggle
+The browser estimator uses parameters from the fitted Ridge model and is intended as an educational portfolio demo, not a production forecasting system.
 
 ## Repository Structure
 
 ```text
 retail-store-sales-analysis/
+├── data/
+│   └── Stores.csv
+├── src/
+│   ├── components/
+│   ├── data/
+│   ├── lib/
+│   └── test/
 ├── retail-store-sales-analysis.ipynb
-└── README.md
+├── README.md
+├── package.json
+├── vite.config.ts
+└── tsconfig.json
 ```
 
-## Running the Project
-
-Install the required libraries:
+## Run the Dashboard
 
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn
+npm install
+npm test
+npm run build
+npm run dev
 ```
 
-The notebook was originally developed on Kaggle and reads data from a Kaggle input path. For local execution, update the CSV path to the location of `Stores.csv` on your computer.
+## Notebook Dependencies
 
-## Key Learning Outcomes
+```bash
+pip install pandas numpy matplotlib scikit-learn jupyter
+```
 
-This project demonstrates how to:
+The notebook automatically uses the Kaggle input path when available and falls back to `data/Stores.csv` locally.
 
-- Inspect a structured dataset
-- Identify missing and duplicated records
-- Convert formatted text into numerical data
-- Fill missing numerical values using the median
-- Create a business-oriented performance metric
-- Build basic charts with Matplotlib and Seaborn
-- Filter, rank, and compare store records
-- Prevent target leakage during feature selection
-- Scale numerical features correctly
-- Train and evaluate a regression model
-- Interpret R² and regression coefficients
+## Technologies
+
+Python, Pandas, NumPy, Matplotlib, scikit-learn, Jupyter, Kaggle, React, TypeScript, Vite, Tailwind CSS, Recharts, Vitest, GitHub Pages.
 
 ## Limitations
 
-- The dataset contains only 118 stores.
-- Several categorical labels appear to contain extra whitespace.
-- The regression model uses only two numerical features.
-- Categorical store characteristics are not included in the model.
-- Performance is evaluated using a single train-test split.
-- Only R² is reported; error-based metrics are not included.
+- Only 118 stores are available.
+- The dataset has no time dimension, location data, customer traffic, promotion history, or product-mix variables.
+- Revenue relationships are observational and should not be interpreted causally.
+- Cross-validation estimates still have noticeable fold-to-fold variation because the sample is small.
 
-## Future Improvements
+## Source Code
 
-Possible improvements include:
+This folder is part of the portfolio repository:
 
-- Removing leading and trailing spaces from categorical labels
-- Standardizing inconsistent category names
-- One-hot encoding `Property`, `Type`, and `Old/New`
-- Adding categorical variables to the regression model
-- Reporting MAE and RMSE alongside R²
-- Applying cross-validation
-- Comparing regularized and tree-based regression models
-- Performing residual analysis
-- Investigating and treating influential outliers
-- Adding feature importance and model-explanation methods
+`mr-amirasgari/kaggle-data-science-projects`

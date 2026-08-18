@@ -1,0 +1,1182 @@
+[
+  {
+    "storeNumber": 1,
+    "area": 2100.0,
+    "property": "Owned",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 6.0,
+    "revenue": 45072000.0,
+    "revenuePerArea": 21462.85714285714
+  },
+  {
+    "storeNumber": 2,
+    "area": 1290.0,
+    "property": "Cooperate",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 5.0,
+    "revenue": 7416000.0,
+    "revenuePerArea": 5748.837209302325
+  },
+  {
+    "storeNumber": 3,
+    "area": 500.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "New",
+    "checkout": null,
+    "revenue": 8592000.0,
+    "revenuePerArea": 17184.0
+  },
+  {
+    "storeNumber": 4,
+    "area": 2000.0,
+    "property": "Owned",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 9.0,
+    "revenue": 48415500.0,
+    "revenuePerArea": 24207.75
+  },
+  {
+    "storeNumber": 5,
+    "area": 220.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "Old",
+    "checkout": 2.0,
+    "revenue": 3345500.0,
+    "revenuePerArea": 15206.818181818182
+  },
+  {
+    "storeNumber": 6,
+    "area": 1322.0,
+    "property": "Owned",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 6.0,
+    "revenue": 22401500.0,
+    "revenuePerArea": 16945.15885022693
+  },
+  {
+    "storeNumber": 7,
+    "area": 4000.0,
+    "property": "Owned",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 13.0,
+    "revenue": 57620000.0,
+    "revenuePerArea": 14405.0
+  },
+  {
+    "storeNumber": 8,
+    "area": 500.0,
+    "property": "Cooperate",
+    "type": "Express",
+    "age": "New",
+    "checkout": 2.0,
+    "revenue": 6808500.0,
+    "revenuePerArea": 13617.0
+  },
+  {
+    "storeNumber": 9,
+    "area": 1000.0,
+    "property": "Rental",
+    "type": "Extra",
+    "age": "New",
+    "checkout": null,
+    "revenue": 9744000.0,
+    "revenuePerArea": 9744.0
+  },
+  {
+    "storeNumber": 10,
+    "area": 2700.0,
+    "property": "Rental/Cooperate",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 4.0,
+    "revenue": 13405500.0,
+    "revenuePerArea": 4965.0
+  },
+  {
+    "storeNumber": 11,
+    "area": 700.0,
+    "property": "Cooperate",
+    "type": "Express",
+    "age": "New",
+    "checkout": null,
+    "revenue": 7104000.0,
+    "revenuePerArea": 10148.57142857143
+  },
+  {
+    "storeNumber": 12,
+    "area": 220.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "Old",
+    "checkout": 2.0,
+    "revenue": 2452500.0,
+    "revenuePerArea": 11147.727272727272
+  },
+  {
+    "storeNumber": 13,
+    "area": 4800.0,
+    "property": "Cooperate",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": null,
+    "revenue": 44911000.0,
+    "revenuePerArea": 9356.458333333334
+  },
+  {
+    "storeNumber": 14,
+    "area": 432.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "Old",
+    "checkout": 2.0,
+    "revenue": 6725500.0,
+    "revenuePerArea": 15568.287037037036
+  },
+  {
+    "storeNumber": 15,
+    "area": 970.0,
+    "property": "Owned",
+    "type": "Express",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 11463000.0,
+    "revenuePerArea": 11817.525773195875
+  },
+  {
+    "storeNumber": 16,
+    "area": 488.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "New",
+    "checkout": 2.0,
+    "revenue": 3634500.0,
+    "revenuePerArea": 7447.745901639344
+  },
+  {
+    "storeNumber": 17,
+    "area": 1000.0,
+    "property": "Cooperate",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 5692500.0,
+    "revenuePerArea": 5692.5
+  },
+  {
+    "storeNumber": 18,
+    "area": 397.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 27337000.0,
+    "revenuePerArea": 68858.94206549118
+  },
+  {
+    "storeNumber": 19,
+    "area": 1070.0,
+    "property": "Owned",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 4.0,
+    "revenue": 27656500.0,
+    "revenuePerArea": 25847.196261682242
+  },
+  {
+    "storeNumber": 20,
+    "area": 1620.0,
+    "property": "Owned",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 6.0,
+    "revenue": 36535500.0,
+    "revenuePerArea": 22552.777777777777
+  },
+  {
+    "storeNumber": 21,
+    "area": 400.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "New",
+    "checkout": 2.0,
+    "revenue": 4367500.0,
+    "revenuePerArea": 10918.75
+  },
+  {
+    "storeNumber": 22,
+    "area": 400.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 9463000.0,
+    "revenuePerArea": 23657.5
+  },
+  {
+    "storeNumber": 23,
+    "area": 340.0,
+    "property": "Cooperate",
+    "type": "Express",
+    "age": "New",
+    "checkout": 2.0,
+    "revenue": 5665000.0,
+    "revenuePerArea": 16661.764705882353
+  },
+  {
+    "storeNumber": 24,
+    "area": 1360.0,
+    "property": "Owned",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 6.0,
+    "revenue": 9255500.0,
+    "revenuePerArea": 6805.514705882353
+  },
+  {
+    "storeNumber": 25,
+    "area": 550.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "New",
+    "checkout": 2.0,
+    "revenue": 11496500.0,
+    "revenuePerArea": 20902.727272727272
+  },
+  {
+    "storeNumber": 26,
+    "area": 500.0,
+    "property": "Cooperate",
+    "type": "Express",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 11785500.0,
+    "revenuePerArea": 23571.0
+  },
+  {
+    "storeNumber": 27,
+    "area": 375.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "Old",
+    "checkout": 5.0,
+    "revenue": 3478000.0,
+    "revenuePerArea": 9274.666666666666
+  },
+  {
+    "storeNumber": 28,
+    "area": 430.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 9872000.0,
+    "revenuePerArea": 22958.13953488372
+  },
+  {
+    "storeNumber": 29,
+    "area": 1577.0,
+    "property": "Owned",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 6.0,
+    "revenue": 46401000.0,
+    "revenuePerArea": 29423.589093214967
+  },
+  {
+    "storeNumber": 30,
+    "area": 620.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 16620500.0,
+    "revenuePerArea": 26807.25806451613
+  },
+  {
+    "storeNumber": 31,
+    "area": 3800.0,
+    "property": "Rental",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": null,
+    "revenue": 21953000.0,
+    "revenuePerArea": 5777.105263157895
+  },
+  {
+    "storeNumber": 32,
+    "area": 3500.0,
+    "property": "Rental",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 11.0,
+    "revenue": 38968500.0,
+    "revenuePerArea": 11133.857142857143
+  },
+  {
+    "storeNumber": 33,
+    "area": 3000.0,
+    "property": "Owned",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 11.0,
+    "revenue": 77139500.0,
+    "revenuePerArea": 25713.166666666668
+  },
+  {
+    "storeNumber": 34,
+    "area": 922.76,
+    "property": "Cooperate",
+    "type": "Express",
+    "age": "Old",
+    "checkout": 4.0,
+    "revenue": 13553000.0,
+    "revenuePerArea": 14687.459361047293
+  },
+  {
+    "storeNumber": 35,
+    "area": 1750.0,
+    "property": "Owned",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 9.0,
+    "revenue": 75874500.0,
+    "revenuePerArea": 43356.857142857145
+  },
+  {
+    "storeNumber": 36,
+    "area": 1400.0,
+    "property": "Cooperate",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 2.0,
+    "revenue": 9808000.0,
+    "revenuePerArea": 7005.714285714285
+  },
+  {
+    "storeNumber": 37,
+    "area": 1100.0,
+    "property": "Cooperate",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 5.0,
+    "revenue": 11285000.0,
+    "revenuePerArea": 10259.09090909091
+  },
+  {
+    "storeNumber": 38,
+    "area": 1000.0,
+    "property": "Rental",
+    "type": "Extra",
+    "age": "New",
+    "checkout": null,
+    "revenue": 22359500.0,
+    "revenuePerArea": 22359.5
+  },
+  {
+    "storeNumber": 39,
+    "area": 1850.0,
+    "property": "Owned",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 6.0,
+    "revenue": 26077000.0,
+    "revenuePerArea": 14095.675675675675
+  },
+  {
+    "storeNumber": 40,
+    "area": 1200.0,
+    "property": "Cooperate",
+    "type": "Extra",
+    "age": "New",
+    "checkout": null,
+    "revenue": 13226500.0,
+    "revenuePerArea": 11022.083333333334
+  },
+  {
+    "storeNumber": 41,
+    "area": 2600.0,
+    "property": "Rental/Cooperate",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": null,
+    "revenue": 19051000.0,
+    "revenuePerArea": 7327.307692307692
+  },
+  {
+    "storeNumber": 42,
+    "area": 700.0,
+    "property": "Owned",
+    "type": "Express",
+    "age": "New",
+    "checkout": 4.0,
+    "revenue": 32913000.0,
+    "revenuePerArea": 47018.57142857143
+  },
+  {
+    "storeNumber": 43,
+    "area": 850.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "Old",
+    "checkout": 3.0,
+    "revenue": 6546500.0,
+    "revenuePerArea": 7701.764705882353
+  },
+  {
+    "storeNumber": 44,
+    "area": 5600.0,
+    "property": "Owned",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 14.0,
+    "revenue": 100083000.0,
+    "revenuePerArea": 17871.964285714286
+  },
+  {
+    "storeNumber": 45,
+    "area": 800.0,
+    "property": "Cooperate",
+    "type": "Express",
+    "age": "New",
+    "checkout": 4.0,
+    "revenue": 11586500.0,
+    "revenuePerArea": 14483.125
+  },
+  {
+    "storeNumber": 46,
+    "area": 1800.0,
+    "property": "Rental/Cooperate",
+    "type": "Extra",
+    "age": "New",
+    "checkout": null,
+    "revenue": 67093000.0,
+    "revenuePerArea": 37273.88888888889
+  },
+  {
+    "storeNumber": 47,
+    "area": 500.0,
+    "property": "Cooperate",
+    "type": "Express",
+    "age": "Old",
+    "checkout": 3.0,
+    "revenue": 5380000.0,
+    "revenuePerArea": 10760.0
+  },
+  {
+    "storeNumber": 48,
+    "area": 1500.0,
+    "property": "Cooperate",
+    "type": "Extra",
+    "age": "New",
+    "checkout": null,
+    "revenue": 30654000.0,
+    "revenuePerArea": 20436.0
+  },
+  {
+    "storeNumber": 49,
+    "area": 1000.0,
+    "property": "Rental/Cooperate",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 6.0,
+    "revenue": 15046000.0,
+    "revenuePerArea": 15046.0
+  },
+  {
+    "storeNumber": 50,
+    "area": 3000.0,
+    "property": "Owned",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 13.0,
+    "revenue": 65403500.0,
+    "revenuePerArea": 21801.166666666668
+  },
+  {
+    "storeNumber": 51,
+    "area": 450.0,
+    "property": "Cooperate",
+    "type": "Express",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 15513500.0,
+    "revenuePerArea": 34474.444444444445
+  },
+  {
+    "storeNumber": 52,
+    "area": 2846.0,
+    "property": "Owned",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 8.0,
+    "revenue": 41001000.0,
+    "revenuePerArea": 14406.53548840478
+  },
+  {
+    "storeNumber": 53,
+    "area": 82.0,
+    "property": "Owned",
+    "type": "Express",
+    "age": "New",
+    "checkout": 2.0,
+    "revenue": 9087000.0,
+    "revenuePerArea": 110817.0731707317
+  },
+  {
+    "storeNumber": 54,
+    "area": 2300.0,
+    "property": "Owned",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 7.0,
+    "revenue": 23766500.0,
+    "revenuePerArea": 10333.260869565218
+  },
+  {
+    "storeNumber": 55,
+    "area": 880.0,
+    "property": "Owned",
+    "type": "Express",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 11075000.0,
+    "revenuePerArea": 12585.227272727272
+  },
+  {
+    "storeNumber": 56,
+    "area": 3000.0,
+    "property": "Owned",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 8.0,
+    "revenue": 41095000.0,
+    "revenuePerArea": 13698.333333333334
+  },
+  {
+    "storeNumber": 57,
+    "area": 2400.0,
+    "property": "Owned",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 5.0,
+    "revenue": 43200500.0,
+    "revenuePerArea": 18000.208333333332
+  },
+  {
+    "storeNumber": 58,
+    "area": 500.0,
+    "property": "Cooperate",
+    "type": "Express",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 12795500.0,
+    "revenuePerArea": 25591.0
+  },
+  {
+    "storeNumber": 59,
+    "area": 940.0,
+    "property": "Rental/Cooperate",
+    "type": "Express",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 2336000.0,
+    "revenuePerArea": 2485.1063829787236
+  },
+  {
+    "storeNumber": 60,
+    "area": 2337.0,
+    "property": "Owned",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 4.0,
+    "revenue": 45216500.0,
+    "revenuePerArea": 19348.095849379548
+  },
+  {
+    "storeNumber": 61,
+    "area": 2300.0,
+    "property": "Rental/Cooperate",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 10.0,
+    "revenue": 31128000.0,
+    "revenuePerArea": 13533.91304347826
+  },
+  {
+    "storeNumber": 62,
+    "area": 1008.0,
+    "property": "Cooperate",
+    "type": "Extra",
+    "age": "Old",
+    "checkout": 5.0,
+    "revenue": 24813500.0,
+    "revenuePerArea": 24616.56746031746
+  },
+  {
+    "storeNumber": 63,
+    "area": 1200.0,
+    "property": "Owned",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 4.0,
+    "revenue": 16025000.0,
+    "revenuePerArea": 13354.166666666666
+  },
+  {
+    "storeNumber": 64,
+    "area": 4180.0,
+    "property": "Rental/Cooperate",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 12.0,
+    "revenue": 54897500.0,
+    "revenuePerArea": 13133.373205741627
+  },
+  {
+    "storeNumber": 65,
+    "area": 600.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "New",
+    "checkout": 2.0,
+    "revenue": 9138500.0,
+    "revenuePerArea": 15230.833333333334
+  },
+  {
+    "storeNumber": 66,
+    "area": 1950.0,
+    "property": "Owned",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 6.0,
+    "revenue": 45189000.0,
+    "revenuePerArea": 23173.846153846152
+  },
+  {
+    "storeNumber": 67,
+    "area": 2184.0,
+    "property": "Owned",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 6.0,
+    "revenue": 51216000.0,
+    "revenuePerArea": 23450.54945054945
+  },
+  {
+    "storeNumber": 68,
+    "area": 1650.0,
+    "property": "Rental/Cooperate",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 8.0,
+    "revenue": 8920000.0,
+    "revenuePerArea": 5406.060606060606
+  },
+  {
+    "storeNumber": 69,
+    "area": 1200.0,
+    "property": "Rental",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 5.0,
+    "revenue": 4561000.0,
+    "revenuePerArea": 3800.8333333333335
+  },
+  {
+    "storeNumber": 70,
+    "area": 4500.0,
+    "property": "Cooperate",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": null,
+    "revenue": 17560500.0,
+    "revenuePerArea": 3902.3333333333335
+  },
+  {
+    "storeNumber": 71,
+    "area": 400.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "New",
+    "checkout": 2.0,
+    "revenue": 11031500.0,
+    "revenuePerArea": 27578.75
+  },
+  {
+    "storeNumber": 72,
+    "area": 2000.0,
+    "property": "Owned",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 7.0,
+    "revenue": 50287500.0,
+    "revenuePerArea": 25143.75
+  },
+  {
+    "storeNumber": 73,
+    "area": 1900.0,
+    "property": "Owned",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 4996000.0,
+    "revenuePerArea": 2629.4736842105262
+  },
+  {
+    "storeNumber": 74,
+    "area": 700.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 13616500.0,
+    "revenuePerArea": 19452.14285714286
+  },
+  {
+    "storeNumber": 75,
+    "area": 2500.0,
+    "property": "Owned",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 8.0,
+    "revenue": 59349000.0,
+    "revenuePerArea": 23739.6
+  },
+  {
+    "storeNumber": 76,
+    "area": 800.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "Old",
+    "checkout": 4.0,
+    "revenue": 23520000.0,
+    "revenuePerArea": 29400.0
+  },
+  {
+    "storeNumber": 77,
+    "area": 1620.0,
+    "property": "Owned",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 8.0,
+    "revenue": 48687500.0,
+    "revenuePerArea": 30054.012345679013
+  },
+  {
+    "storeNumber": 78,
+    "area": 1272.0,
+    "property": "Owned",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 5.0,
+    "revenue": 26469000.0,
+    "revenuePerArea": 20808.962264150945
+  },
+  {
+    "storeNumber": 79,
+    "area": 980.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 4064500.0,
+    "revenuePerArea": 4147.448979591837
+  },
+  {
+    "storeNumber": 80,
+    "area": 562.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 24214000.0,
+    "revenuePerArea": 43085.40925266904
+  },
+  {
+    "storeNumber": 81,
+    "area": 245.0,
+    "property": "Owned",
+    "type": "Express",
+    "age": "Old",
+    "checkout": 1.0,
+    "revenue": 3300500.0,
+    "revenuePerArea": 13471.42857142857
+  },
+  {
+    "storeNumber": 82,
+    "area": 1000.0,
+    "property": "Rental",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 7.0,
+    "revenue": 30818000.0,
+    "revenuePerArea": 30818.0
+  },
+  {
+    "storeNumber": 83,
+    "area": 550.0,
+    "property": "Rental/Cooperate",
+    "type": "Express",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 8999500.0,
+    "revenuePerArea": 16362.727272727272
+  },
+  {
+    "storeNumber": 84,
+    "area": 2000.0,
+    "property": "Rental",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 6.0,
+    "revenue": 18973500.0,
+    "revenuePerArea": 9486.75
+  },
+  {
+    "storeNumber": 85,
+    "area": 1530.0,
+    "property": "Rental",
+    "type": "Extra",
+    "age": "Old",
+    "checkout": 6.0,
+    "revenue": 32461000.0,
+    "revenuePerArea": 21216.339869281044
+  },
+  {
+    "storeNumber": 86,
+    "area": 2400.0,
+    "property": "Owned",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 10.0,
+    "revenue": 97408000.0,
+    "revenuePerArea": 40586.666666666664
+  },
+  {
+    "storeNumber": 87,
+    "area": 450.0,
+    "property": "Cooperate",
+    "type": "Express",
+    "age": "Old",
+    "checkout": 3.0,
+    "revenue": 8072000.0,
+    "revenuePerArea": 17937.777777777777
+  },
+  {
+    "storeNumber": 88,
+    "area": 1000.0,
+    "property": "Cooperate",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 4.0,
+    "revenue": 10425000.0,
+    "revenuePerArea": 10425.0
+  },
+  {
+    "storeNumber": 89,
+    "area": 500.0,
+    "property": "Owned",
+    "type": "Express",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 17252000.0,
+    "revenuePerArea": 34504.0
+  },
+  {
+    "storeNumber": 90,
+    "area": 742.0,
+    "property": "Cooperate",
+    "type": "Express",
+    "age": "Old",
+    "checkout": 2.0,
+    "revenue": 6545000.0,
+    "revenuePerArea": 8820.754716981131
+  },
+  {
+    "storeNumber": 91,
+    "area": 2085.0,
+    "property": "Owned",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 7.0,
+    "revenue": 61497000.0,
+    "revenuePerArea": 29494.96402877698
+  },
+  {
+    "storeNumber": 92,
+    "area": 1400.0,
+    "property": "Owned",
+    "type": "Extra",
+    "age": "Old",
+    "checkout": 4.0,
+    "revenue": 14417500.0,
+    "revenuePerArea": 10298.214285714286
+  },
+  {
+    "storeNumber": 93,
+    "area": 1925.0,
+    "property": "Owned",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 6.0,
+    "revenue": 28091000.0,
+    "revenuePerArea": 14592.727272727272
+  },
+  {
+    "storeNumber": 94,
+    "area": 1500.0,
+    "property": "Owned",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 7.0,
+    "revenue": 59794500.0,
+    "revenuePerArea": 39863.0
+  },
+  {
+    "storeNumber": 95,
+    "area": 2000.0,
+    "property": "Rental/Cooperate",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 6.0,
+    "revenue": 36413000.0,
+    "revenuePerArea": 18206.5
+  },
+  {
+    "storeNumber": 96,
+    "area": 406.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "New",
+    "checkout": 2.0,
+    "revenue": 13350000.0,
+    "revenuePerArea": 32881.773399014775
+  },
+  {
+    "storeNumber": 97,
+    "area": 600.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 6957000.0,
+    "revenuePerArea": 11595.0
+  },
+  {
+    "storeNumber": 98,
+    "area": 1600.0,
+    "property": "Rental/Cooperate",
+    "type": "Extra",
+    "age": "New",
+    "checkout": null,
+    "revenue": 3065500.0,
+    "revenuePerArea": 1915.9375
+  },
+  {
+    "storeNumber": 99,
+    "area": 1100.0,
+    "property": "Cooperate",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 4.0,
+    "revenue": 13806000.0,
+    "revenuePerArea": 12550.90909090909
+  },
+  {
+    "storeNumber": 100,
+    "area": 890.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 13053500.0,
+    "revenuePerArea": 14666.85393258427
+  },
+  {
+    "storeNumber": 101,
+    "area": 314.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "New",
+    "checkout": 2.0,
+    "revenue": 5734500.0,
+    "revenuePerArea": 18262.738853503186
+  },
+  {
+    "storeNumber": 102,
+    "area": 290.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "New",
+    "checkout": 2.0,
+    "revenue": 2415000.0,
+    "revenuePerArea": 8327.586206896553
+  },
+  {
+    "storeNumber": 103,
+    "area": 500.0,
+    "property": "Rental",
+    "type": "Express",
+    "age": "New",
+    "checkout": 2.0,
+    "revenue": 5853000.0,
+    "revenuePerArea": 11706.0
+  },
+  {
+    "storeNumber": 104,
+    "area": 800.0,
+    "property": "Cooperate",
+    "type": "Express",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 25635000.0,
+    "revenuePerArea": 32043.75
+  },
+  {
+    "storeNumber": 105,
+    "area": 1600.0,
+    "property": "Owned",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 5.0,
+    "revenue": 29278000.0,
+    "revenuePerArea": 18298.75
+  },
+  {
+    "storeNumber": 106,
+    "area": 650.0,
+    "property": "Rental/Cooperate",
+    "type": "Express",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 9705000.0,
+    "revenuePerArea": 14930.76923076923
+  },
+  {
+    "storeNumber": 107,
+    "area": 4500.0,
+    "property": "Owned",
+    "type": "Hyper",
+    "age": "New",
+    "checkout": 9.0,
+    "revenue": 43962000.0,
+    "revenuePerArea": 9769.333333333334
+  },
+  {
+    "storeNumber": 108,
+    "area": 420.0,
+    "property": "Cooperate",
+    "type": "Express",
+    "age": "Old",
+    "checkout": 3.0,
+    "revenue": 9646500.0,
+    "revenuePerArea": 22967.85714285714
+  },
+  {
+    "storeNumber": 109,
+    "area": 900.0,
+    "property": "Cooperate",
+    "type": "Express",
+    "age": "New",
+    "checkout": 4.0,
+    "revenue": 11198000.0,
+    "revenuePerArea": 12442.222222222223
+  },
+  {
+    "storeNumber": 110,
+    "area": 600.0,
+    "property": "Cooperate",
+    "type": "Express",
+    "age": "New",
+    "checkout": 4.0,
+    "revenue": 10703000.0,
+    "revenuePerArea": 17838.333333333332
+  },
+  {
+    "storeNumber": 111,
+    "area": 524.0,
+    "property": "Owned",
+    "type": "Express",
+    "age": "New",
+    "checkout": 2.0,
+    "revenue": 19610000.0,
+    "revenuePerArea": 37423.6641221374
+  },
+  {
+    "storeNumber": 112,
+    "area": 650.0,
+    "property": "Cooperate",
+    "type": "Express",
+    "age": "New",
+    "checkout": 3.0,
+    "revenue": 12976000.0,
+    "revenuePerArea": 19963.076923076922
+  },
+  {
+    "storeNumber": 113,
+    "area": 800.0,
+    "property": "Cooperate",
+    "type": "Express",
+    "age": "New",
+    "checkout": 5.0,
+    "revenue": 7552000.0,
+    "revenuePerArea": 9440.0
+  },
+  {
+    "storeNumber": 114,
+    "area": 1800.0,
+    "property": "Rental/Cooperate",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 9.0,
+    "revenue": 13471000.0,
+    "revenuePerArea": 7483.888888888889
+  },
+  {
+    "storeNumber": 115,
+    "area": 1700.0,
+    "property": "Owned",
+    "type": "Extra",
+    "age": "New",
+    "checkout": 6.0,
+    "revenue": 29974500.0,
+    "revenuePerArea": 17632.058823529413
+  },
+  {
+    "storeNumber": 116,
+    "area": 500.0,
+    "property": "Rental/Cooperate",
+    "type": "Express",
+    "age": "New",
+    "checkout": 2.0,
+    "revenue": 11031500.0,
+    "revenuePerArea": 22063.0
+  },
+  {
+    "storeNumber": 117,
+    "area": 200.0,
+    "property": "Rental/Cooperate",
+    "type": "Express",
+    "age": "New",
+    "checkout": 2.0,
+    "revenue": 6173500.0,
+    "revenuePerArea": 30867.5
+  },
+  {
+    "storeNumber": 118,
+    "area": 420.0,
+    "property": "Cooperate",
+    "type": "Express",
+    "age": "Old",
+    "checkout": 3.0,
+    "revenue": 10643000.0,
+    "revenuePerArea": 25340.47619047619
+  }
+]
