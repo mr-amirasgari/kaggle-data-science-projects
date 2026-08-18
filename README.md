@@ -1,228 +1,297 @@
-# Kaggle Data Science Projects
+# 📊 Data Science & Machine Learning Portfolio
 
-A collection of three end-to-end data science projects developed in Python and Kaggle.  
-The repository covers exploratory data analysis, data cleaning, feature engineering, statistical analysis, classification, regression, and model evaluation.
+A collection of end-to-end data science and machine learning projects covering exploratory data analysis, feature engineering, statistical analysis, predictive modeling, model evaluation, and interactive dashboard deployment.
 
-## Projects
+Each project is developed as more than a notebook. The goal is to turn the complete data science workflow into a reproducible, interpretable, and interactive portfolio project.
 
-| Project | Problem Type | Main Methods | Key Result |
+---
+
+## 🚀 Projects
+
+| Project | Focus | Highlights | Live Demo |
 |---|---|---|---|
-| [Drug Classification](./drug-classification) | Multiclass classification | EDA, statistical tests, feature engineering, Decision Tree, Logistic Regression | Decision Tree: 100% test accuracy; Logistic Regression: 98% test accuracy |
-| [Loan Credit Analysis](./loan-credit-analysis) | Imbalanced binary classification | Data cleaning, feature transformation, Logistic Regression, Random Forest, XGBoost, SMOTE | Logistic Regression after SMOTE achieved 44.59% recall and 0.3309 F1 score |
-| [Retail Store Sales Analysis](./retail-store-sales-analysis) | Regression and business analysis | Data cleaning, KPI creation, EDA, Linear Regression | Linear Regression achieved an R² score of 0.3639 |
+| 💊 **Drug Classification** | Multiclass Classification | EDA, Statistical Analysis, Feature Engineering, Decision Tree, Logistic Regression | [Open Dashboard](https://mr-amirasgari.github.io/kaggle-data-science-projects/) |
+| 💳 **Loan Credit Analysis** | Imbalanced Binary Classification | Credit Risk, SMOTE, Logistic Regression, Random Forest, XGBoost | [Open Dashboard](https://mr-amirasgari.github.io/kaggle-data-science-projects/loan-credit-analysis/) |
+| 🏪 **Retail Store Sales Analysis** | Regression & Business Analytics | EDA, Revenue Analysis, Ridge Regression, Extra Trees, Cross-Validation | [Open Dashboard](https://mr-amirasgari.github.io/kaggle-data-science-projects/retail-store-sales-analysis/) |
 
-## Repository Structure
+---
 
-```text
-kaggle-data-science-projects/
-├── drug-classification/
-│   ├── drug-classification.ipynb
-│   └── README.md
-├── loan-credit-analysis/
-│   ├── loan-credit-analysis.ipynb
-│   └── README.md
-├── retail-store-sales-analysis/
-│   ├── retail-store-sales-analysis.ipynb
-│   └── README.md
-├── .gitignore
-└── README.md
-```
+# 💊 Drug Classification
 
-## 1. Drug Classification
+An end-to-end multiclass classification project focused on predicting the appropriate drug class from patient characteristics.
 
-A multiclass machine learning project for predicting one of five drug categories using patient-related features.
+## Key Topics
 
-### Main Steps
+- Exploratory Data Analysis
+- Descriptive Statistics
+- Statistical Analysis
+- Feature Engineering
+- Na/K Ratio Analysis
+- Label Encoding
+- Feature Scaling
+- Decision Tree
+- Logistic Regression
+- Confusion Matrix
+- Classification Report
+- Model Comparison
 
-- Data inspection and descriptive statistics
-- Exploratory data analysis
-- Correlation analysis
-- Pearson, Spearman, and chi-square tests
-- Categorical encoding
-- Sodium-to-potassium ratio feature engineering
-- Feature scaling
-- Decision Tree classification
-- Logistic Regression classification
-- Confusion matrix and classification report analysis
+## Performance Snapshot
 
-### Main Results
+| Model | Training Accuracy | Test Accuracy |
+|---|---:|---:|
+| Decision Tree | **100%** | **100%** |
+| Logistic Regression | **94%** | **98%** |
 
-- Decision Tree training accuracy: **100%**
-- Decision Tree testing accuracy: **100%**
-- Logistic Regression training accuracy: **94%**
-- Logistic Regression testing accuracy: **98%**
+## Project Links
 
-Because the dataset is small and the results are based on a single train-test split, these scores should not be interpreted as real-world clinical performance.
+**📂 Project Folder**
 
-### Dataset
+[drug-classification](./drug-classification)
 
-[Drug Classification Dataset on Kaggle](https://www.kaggle.com/datasets/mramirasgari/introds)
+**🌐 Live Dashboard**
 
-### Project Files
+https://mr-amirasgari.github.io/kaggle-data-science-projects/
 
-- [Notebook](./drug-classification/drug-classification.ipynb)
-- [Detailed README](./drug-classification/README.md)
+---
 
-## 2. Loan Credit Analysis
+# 💳 Loan Credit Analysis
 
-A binary classification project for predicting whether a loan will be not fully paid.
+An end-to-end binary classification project focused on analyzing borrower characteristics and predicting whether a loan will not be fully paid.
 
-### Main Steps
+A major focus of this project is the effect of class imbalance and why accuracy alone can be misleading when evaluating credit-risk models.
 
-- Missing-value and duplicate checks
-- Numerical and categorical exploratory analysis
-- Feature binning
-- Log transformation
-- One-hot and label encoding
-- Feature scaling
+## Key Topics
+
+- Credit Risk Analysis
+- Data Cleaning
+- Exploratory Data Analysis
+- Feature Engineering
+- Feature Scaling
 - Logistic Regression
 - Random Forest
 - XGBoost
-- Class imbalance treatment with SMOTE
-- Evaluation using accuracy, precision, recall, F1 score, ROC-AUC, and confusion matrices
+- Class Imbalance
+- SMOTE
+- Precision
+- Recall
+- F1 Score
+- ROC AUC
+- Confusion Matrices
+- Model Comparison
 
-### Main Results
+## Key Result
 
-Before SMOTE, Logistic Regression achieved the highest ROC-AUC:
+After applying SMOTE, Logistic Regression achieved:
 
-- ROC-AUC: **0.7050**
-- Recall: **0.0197**
-- F1 score: **0.0377**
+| Metric | Result |
+|---|---:|
+| Recall | **44.59%** |
+| F1 Score | **0.3309** |
 
-After SMOTE, Logistic Regression achieved the strongest minority-class detection:
+The experiment demonstrates the trade-off between overall accuracy and minority-class detection.
 
-- Accuracy: **0.7129**
-- Precision: **0.2631**
-- Recall: **0.4459**
-- F1 score: **0.3309**
-- ROC-AUC: **0.6665**
+## Project Links
 
-The results demonstrate why accuracy alone is not sufficient for imbalanced classification problems.
+**📂 Project Folder**
 
-### Dataset
+[loan-credit-analysis](./loan-credit-analysis)
 
-[Loan Dataset on Kaggle](https://www.kaggle.com/datasets/mramirasgari/loan-data)
+**🌐 Live Dashboard**
 
-### Project Files
+https://mr-amirasgari.github.io/kaggle-data-science-projects/loan-credit-analysis/
 
-- [Notebook](./loan-credit-analysis/loan-credit-analysis.ipynb)
-- [Detailed README](./loan-credit-analysis/README.md)
+---
 
-## 3. Retail Store Sales Analysis
+# 🏪 Retail Store Sales Analysis
 
-A retail analytics and regression project focused on store performance and revenue prediction.
+An end-to-end retail analytics and machine learning project focused on understanding store performance and modeling store revenue.
 
-### Main Steps
+The project combines business-oriented exploratory analysis with a leakage-aware regression workflow and an interactive revenue estimation dashboard.
 
-- Data inspection and cleaning
-- Missing-value treatment
-- Revenue type conversion
-- Categorical frequency analysis
-- Revenue distribution analysis
-- Revenue-per-area KPI creation
-- Store ranking and comparison
-- Linear Regression modeling
-- Model coefficient interpretation
+## Key Topics
 
-### Main Results
+- Retail Business Analytics
+- Data Cleaning
+- Exploratory Data Analysis
+- Store Performance Analysis
+- Revenue Analysis
+- Revenue per Area
+- Feature Engineering
+- One-Hot Encoding
+- Pipeline-Based Preprocessing
+- Linear Regression
+- Ridge Regression
+- Extra Trees
+- Cross-Validation
+- MAE
+- RMSE
+- R²
+- Residual Analysis
+- Actual vs Predicted Analysis
 
-A Linear Regression model was trained using:
+## Model Comparison
 
-- Store area
-- Number of checkout counters
+| Model | Cross-Validated R² |
+|---|---:|
+| **Ridge Regression** | **0.572** |
+| Extra Trees | **0.546** |
+| Linear Regression | **0.545** |
 
-The model achieved:
+The interactive dashboard also includes a browser-based revenue scenario estimator derived from the trained Ridge Regression model.
 
-- Test R²: **0.3639**
+## Project Links
 
-This indicates that the selected features explain approximately 36.4% of the variation in store revenue.
+**📂 Project Folder**
 
-### Dataset
+[retail-store-sales-analysis](./retail-store-sales-analysis)
 
-[Retail Store Dataset on Kaggle](https://www.kaggle.com/datasets/mramirasgari/stores)
+**🌐 Live Dashboard**
 
-### Project Files
+https://mr-amirasgari.github.io/kaggle-data-science-projects/retail-store-sales-analysis/
 
-- [Notebook](./retail-store-sales-analysis/retail-store-sales-analysis.ipynb)
-- [Detailed README](./retail-store-sales-analysis/README.md)
+---
 
-## Technologies Used
+# 🧠 Skills Demonstrated
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- SciPy
-- Scikit-learn
-- XGBoost
-- Imbalanced-learn
-- Graphviz
-- Jupyter Notebook
-- Kaggle
-- Git and GitHub
+Across the projects, this repository demonstrates practical experience with:
 
-## Installation
+- Data Cleaning
+- Data Preparation
+- Exploratory Data Analysis
+- Descriptive Statistics
+- Statistical Testing
+- Feature Engineering
+- Classification
+- Regression
+- Imbalanced Learning
+- Model Evaluation
+- Cross-Validation
+- Feature Scaling
+- One-Hot Encoding
+- Label Encoding
+- Data Leakage Prevention
+- Business-Oriented Interpretation
+- Interactive Data Visualization
+- Browser-Side Model Demonstrations
+- Reproducible Machine Learning Workflows
+- GitHub Pages Deployment
+- CI/CD with GitHub Actions
 
-Clone the repository:
+---
 
-```bash
-git clone https://github.com/YOUR-USERNAME/kaggle-data-science-projects.git
-cd kaggle-data-science-projects
-```
+# 🛠 Technology Stack
 
-Install the main dependencies:
+## Data Science
 
-```bash
-pip install pandas numpy matplotlib seaborn scipy scikit-learn xgboost imbalanced-learn graphviz jupyter
-```
+`Python`  
+`Pandas`  
+`NumPy`  
+`SciPy`  
+`Scikit-learn`  
+`XGBoost`  
+`imbalanced-learn`
 
-Open Jupyter Notebook:
+## Data Visualization
 
-```bash
-jupyter notebook
-```
+`Matplotlib`  
+`Seaborn`  
+`Recharts`
 
-Then open the desired notebook from its project folder.
+## Dashboard Development
 
-## Data Paths
+`React`  
+`TypeScript`  
+`Vite`  
+`Tailwind CSS`
 
-The notebooks were originally developed on Kaggle and may contain paths such as:
+## Deployment
+
+`GitHub Pages`  
+`GitHub Actions`
+
+---
+
+# 📁 Repository Structure
 
 ```text
-/kaggle/input/...
+kaggle-data-science-projects/
+│
+├── .github/
+│   └── workflows/
+│       └── deploy-pages.yml
+│
+├── drug-classification/
+│   ├── src/
+│   ├── README.md
+│   ├── package.json
+│   ├── vite.config.ts
+│   ├── *.ipynb
+│   └── ...
+│
+├── loan-credit-analysis/
+│   ├── src/
+│   ├── README.md
+│   ├── package.json
+│   ├── vite.config.ts
+│   ├── *.ipynb
+│   └── ...
+│
+├── retail-store-sales-analysis/
+│   ├── src/
+│   ├── README.md
+│   ├── package.json
+│   ├── vite.config.ts
+│   ├── *.ipynb
+│   └── ...
+│
+└── README.md
 ```
 
-For local execution, download the related dataset and update the CSV path inside the notebook.
+---
 
-## Skills Demonstrated
+# 🌐 Interactive Portfolio
 
-This repository demonstrates experience with:
+All dashboards are automatically built and deployed through GitHub Actions.
 
-- Exploratory data analysis
-- Data cleaning and preprocessing
-- Statistical analysis
-- Feature engineering
-- Categorical encoding
-- Feature scaling
-- Classification and regression
-- Imbalanced-data handling
-- Model evaluation
-- Data visualization
-- Notebook documentation
-- Git and GitHub project organization
+## 💊 Drug Classification
 
-## Important Notes
+https://mr-amirasgari.github.io/kaggle-data-science-projects/
 
-- The projects are educational portfolio projects.
-- Model results are based on the current notebook configurations and train-test splits.
-- The drug classification project must not be used for medical decisions.
-- The loan analysis project must not be used as the sole basis for real lending decisions.
-- Dataset usage should follow the terms and licenses provided on Kaggle.
+## 💳 Loan Credit Analysis
 
-## Author
+https://mr-amirasgari.github.io/kaggle-data-science-projects/loan-credit-analysis/
+
+## 🏪 Retail Store Sales Analysis
+
+https://mr-amirasgari.github.io/kaggle-data-science-projects/retail-store-sales-analysis/
+
+---
+
+# 🎯 Repository Goal
+
+The goal of this repository is to build a growing collection of portfolio-grade data science projects that demonstrate not only model training, but the complete workflow from raw data exploration to evaluation, interpretation, visualization, and deployment.
+
+Future projects will progressively introduce more advanced topics such as:
+
+- High-Dimensional Data
+- Feature Selection
+- Dimensionality Reduction
+- PCA
+- Advanced Imbalanced Learning
+- Explainable Machine Learning
+- Threshold Optimization
+- Hyperparameter Optimization
+- Larger Real-World Datasets
+- More Advanced Interactive Dashboards
+
+---
+
+# 👤 Author
 
 **Amir Asgari**
 
-- [Kaggle Profile](https://www.kaggle.com/mramirasgari)
-- [GitHub Profile](https://github.com/mr-amirasgari)
+GitHub: [@mr-amirasgari](https://github.com/mr-amirasgari)
+
+---
+
+⭐ If you find these projects useful, consider starring the repository.
