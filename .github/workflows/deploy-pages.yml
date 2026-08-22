@@ -17,6 +17,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,6 +30,8 @@ jobs:
           cache-dependency-path: |
             drug-classification/package-lock.json
             loan-credit-analysis/package-lock.json
+            retail-store-sales-analysis/package-lock.json
+            diabetes-hospital-readmission-analysis/dashboard/package-lock.json
 
       - name: Build Drug dashboard
         working-directory: drug-classification
@@ -51,12 +54,22 @@ jobs:
           npm test
           npm run build
 
+      - name: Build Diabetes dashboard
+        working-directory: diabetes-hospital-readmission-analysis/dashboard
+        run: |
+          npm install
+          npm run build
+
       - name: Assemble Pages site
         run: |
-          mkdir -p site/loan-credit-analysis site/retail-store-sales-analysis
+          mkdir -p site/loan-credit-analysis
+          mkdir -p site/retail-store-sales-analysis
+          mkdir -p site/diabetes-hospital-readmission-analysis
+
           cp -r drug-classification/dist/. site/
           cp -r loan-credit-analysis/dist/. site/loan-credit-analysis/
           cp -r retail-store-sales-analysis/dist/. site/retail-store-sales-analysis/
+          cp -r diabetes-hospital-readmission-analysis/dashboard/dist/. site/diabetes-hospital-readmission-analysis/
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
@@ -70,8 +83,10 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
     needs: build
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
