@@ -1,64 +1,92 @@
-# Diabetes Hospital Readmission Analysis
+# 🏥 Diabetes Hospital Readmission Analysis
 
-An end-to-end machine learning project for predicting early hospital readmission among diabetic patients using the CRISP-DM methodology.
+An end-to-end machine learning project for predicting early hospital readmission among diabetic patients using the **CRISP-DM methodology**.
 
-The objective is to identify patients who are likely to be readmitted within 30 days after discharge.
+The objective is to identify patients who are likely to be readmitted within 30 days after discharge and analyze the main factors influencing readmission risk using explainable machine learning techniques.
 
 ---
 
-## Project Overview
+# 🌐 Project Demo
+
+## Interactive Dashboard
+
+🔗 Live Dashboard:
+
+https://mr-amirasgari.github.io/kaggle-data-science-projects/diabetes-hospital-readmission-analysis/
+
+
+## Kaggle Notebook
+
+🔗 Kaggle:
+
+[Kaggle Notebook Link]
+
+---
+
+# 📌 Project Overview
 
 Hospital readmission prediction is an important healthcare analytics problem.
 
 This project focuses on:
 
-- Binary classification of early readmission
+- Early readmission prediction
+- Binary classification of hospital encounters
 - Imbalanced medical data analysis
 - Feature engineering
 - Model comparison
 - Explainable machine learning
 
-Target transformation:
+## Target Definition
 
-- `<30` → 1 (Early Readmission)
-- `NO` and `>30` → 0 (No Early Readmission)
+The original target variable is transformed into a binary classification problem:
+
+| Original Value | New Label |
+|---|---:|
+| `<30` | 1 (Early Readmission) |
+| `NO` | 0 |
+| `>30` | 0 |
 
 ---
 
-# CRISP-DM Workflow
+# 🔄 CRISP-DM Workflow
 
-## Business Understanding
+## 1. Business Understanding
 
-The goal is to predict early hospital readmission risk and understand the factors associated with future readmission.
+The goal is to predict patients at higher risk of early hospital readmission and identify the variables associated with readmission risk.
 
-## Data Understanding
+---
 
-Performed analysis:
+## 2. Data Understanding
 
-- Target distribution
-- Missing values
-- Admission and discharge patterns
-- Diagnosis codes
-- Healthcare utilization
-- Encounter complexity
+Performed analyses:
+
+- Target distribution analysis
+- Missing value analysis
+- Admission patterns
+- Discharge patterns
+- Diagnosis code analysis
+- Healthcare utilization analysis
+- Encounter complexity analysis
 - Correlation analysis
 
-## Data Preparation
+---
 
-Steps:
+## 3. Data Preparation
+
+Processing steps:
 
 - Identifier removal
 - Target transformation
 - Missing value handling
 - Feature engineering
-- Encoding
-- Scaling
+- Encoding categorical variables
+- Feature scaling
 
 ---
 
-# Machine Learning Models
+# 🤖 Machine Learning Models
 
-Implemented models:
+Three classification approaches were evaluated:
 
 ## Logistic Regression
 
@@ -66,42 +94,56 @@ Interpretable baseline classifier.
 
 ## Random Forest
 
-Tree-based ensemble model for non-linear patterns.
+Tree-based ensemble model capable of capturing non-linear relationships.
 
 ## XGBoost
 
-Gradient boosting model for structured healthcare data.
+Gradient boosting model optimized for structured healthcare data.
 
 ---
 
-# Imbalanced Learning
+# ⚖️ Imbalanced Learning
 
-The project handles class imbalance using:
+Hospital readmission data contains class imbalance.
+
+Techniques applied:
 
 - Class weighting
 - SMOTE oversampling
 
 Evaluation metrics:
 
+- Accuracy
 - Precision
 - Recall
 - F1-score
 - ROC-AUC
+- Confusion Matrix
 
 ---
 
-# Explainability
+# 🔍 Explainable AI
 
-Included:
+To improve model interpretability, the project includes:
 
 - Feature Importance
-- SHAP explanations
+- SHAP analysis
 
-These methods help understand which variables influence model predictions.
+These techniques help identify the main variables contributing to model predictions.
+
+Examples of important factors:
+
+- Previous inpatient visits
+- Emergency visits
+- Number of diagnoses
+- Medication complexity
+- Hospital stay duration
 
 ---
 
-# Technologies
+# 🛠 Technologies
+
+## Data Science
 
 - Python
 - Pandas
@@ -110,14 +152,88 @@ These methods help understand which variables influence model predictions.
 - XGBoost
 - Imbalanced-learn
 - SHAP
+
+## Visualization
+
 - Matplotlib
 - Seaborn
+
+## Development
+
 - Jupyter Notebook
+- React
+- TypeScript
+- Vite
+
+## Deployment
+
+- GitHub Pages
+- GitHub Actions
 
 ---
 
-# Disclaimer
+# 📁 Project Structure
+
+```text
+diabetes-hospital-readmission-analysis/
+
+│
+├── dashboard/
+│   ├── src/
+│   ├── package.json
+│   └── vite.config.ts
+│
+├── diabetes-hospital-readmission.ipynb
+│
+├── README.md
+│
+└── requirements.txt
+````markdown
+# ▶️ Run Locally
+
+## Dashboard
+
+Navigate to the dashboard directory:
+
+```bash
+cd dashboard
+````
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## Notebook
+
+Install Python dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Launch Jupyter Notebook:
+
+```bash
+jupyter notebook
+```
+
+---
+
+# ⚠️ Disclaimer
 
 This project is developed for educational and analytical purposes only.
 
-The model should not be used as a standalone clinical decision system.
+The model is not intended to be used as a standalone clinical decision system.
+
+```
+```
