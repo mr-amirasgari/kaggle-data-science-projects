@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Node
+dashboard/node_modules/
+dashboard/dist/
+
+# Environment
+.env
+
+# OS
+.DS_Store
+Thumbs.db
