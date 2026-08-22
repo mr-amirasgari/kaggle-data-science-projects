@@ -1,21 +1,86 @@
 # 📊 Data Science & Machine Learning Portfolio
 
-A collection of end-to-end data science and machine learning projects covering exploratory data analysis, feature engineering, statistical analysis, predictive modeling, model evaluation, and interactive dashboard deployment.
+A collection of end-to-end data science and machine learning projects covering exploratory data analysis, feature engineering, statistical analysis, predictive modeling, explainable AI, model evaluation, and interactive dashboard deployment.
 
-Each project is developed as more than a notebook. The goal is to turn the complete data science workflow into a reproducible, interpretable, and interactive portfolio project.
+Each project is developed beyond a simple notebook. The goal is to demonstrate the complete data science workflow from raw data exploration to model interpretation and deployment.
 
 ---
 
-## 🚀 Projects
+# 🚀 Projects
 
 | Project | Focus | Highlights | Live Demo |
 |---|---|---|---|
 | 💊 **Drug Classification** | Multiclass Classification | EDA, Statistical Analysis, Feature Engineering, Decision Tree, Logistic Regression | [Open Dashboard](https://mr-amirasgari.github.io/kaggle-data-science-projects/) |
 | 💳 **Loan Credit Analysis** | Imbalanced Binary Classification | Credit Risk, SMOTE, Logistic Regression, Random Forest, XGBoost | [Open Dashboard](https://mr-amirasgari.github.io/kaggle-data-science-projects/loan-credit-analysis/) |
 | 🏪 **Retail Store Sales Analysis** | Regression & Business Analytics | EDA, Revenue Analysis, Ridge Regression, Extra Trees, Cross-Validation | [Open Dashboard](https://mr-amirasgari.github.io/kaggle-data-science-projects/retail-store-sales-analysis/) |
+| 🏥 **Diabetes Hospital Readmission Prediction** | Healthcare Binary Classification | CRISP-DM, EDA, Feature Engineering, XGBoost, SMOTE, SHAP Explainable AI | [Open Dashboard](https://mr-amirasgari.github.io/kaggle-data-science-projects/diabetes-hospital-readmission-analysis/) |
 
 ---
 
+# 🏥 Diabetes Hospital Readmission Prediction
+
+An end-to-end healthcare machine learning project focused on predicting 30-day hospital readmission risk among diabetic patients.
+
+The project follows the **CRISP-DM methodology** and transforms hospital encounter data into an interpretable machine learning pipeline with an interactive dashboard.
+
+## Key Topics
+
+- Healthcare Analytics
+- CRISP-DM Methodology
+- Exploratory Data Analysis
+- Missing Value Analysis
+- Feature Engineering
+- Binary Classification
+- Imbalanced Learning
+- SMOTE
+- Logistic Regression
+- Random Forest
+- XGBoost
+- Model Evaluation
+- Feature Importance
+- SHAP Explainable AI
+- Interactive Dashboard Deployment
+
+
+## Modeling Approach
+
+| Model | Role |
+|---|---|
+| Logistic Regression | Baseline classification model |
+| Random Forest | Ensemble learning model |
+| XGBoost + SMOTE | Advanced model for imbalanced classification |
+
+
+## Explainability
+
+Explainable AI techniques are used to understand the main factors affecting readmission risk.
+
+Important factors include:
+
+- Previous inpatient visits
+- Emergency visits
+- Number of diagnoses
+- Medication complexity
+- Hospital stay duration
+
+
+## Project Links
+
+📂 **Project Folder**
+
+[diabetes-hospital-readmission-analysis](./diabetes-hospital-readmission-analysis)
+
+
+📓 **Kaggle Notebook**
+
+[Kaggle Notebook Link]
+
+
+🌐 **Live Dashboard**
+
+https://mr-amirasgari.github.io/kaggle-data-science-projects/diabetes-hospital-readmission-analysis/
+
+---
 # 💊 Drug Classification
 
 An end-to-end multiclass classification project focused on predicting the appropriate drug class from patient characteristics.
@@ -35,6 +100,7 @@ An end-to-end multiclass classification project focused on predicting the approp
 - Classification Report
 - Model Comparison
 
+
 ## Performance Snapshot
 
 | Model | Training Accuracy | Test Accuracy |
@@ -42,13 +108,15 @@ An end-to-end multiclass classification project focused on predicting the approp
 | Decision Tree | **100%** | **100%** |
 | Logistic Regression | **94%** | **98%** |
 
+
 ## Project Links
 
-**📂 Project Folder**
+📂 **Project Folder**
 
 [drug-classification](./drug-classification)
 
-**🌐 Live Dashboard**
+
+🌐 **Live Dashboard**
 
 https://mr-amirasgari.github.io/kaggle-data-science-projects/
 
@@ -79,6 +147,7 @@ A major focus of this project is the effect of class imbalance and why accuracy 
 - Confusion Matrices
 - Model Comparison
 
+
 ## Key Result
 
 After applying SMOTE, Logistic Regression achieved:
@@ -88,15 +157,18 @@ After applying SMOTE, Logistic Regression achieved:
 | Recall | **44.59%** |
 | F1 Score | **0.3309** |
 
+
 The experiment demonstrates the trade-off between overall accuracy and minority-class detection.
+
 
 ## Project Links
 
-**📂 Project Folder**
+📂 **Project Folder**
 
 [loan-credit-analysis](./loan-credit-analysis)
 
-**🌐 Live Dashboard**
+
+🌐 **Live Dashboard**
 
 https://mr-amirasgari.github.io/kaggle-data-science-projects/loan-credit-analysis/
 
@@ -129,6 +201,7 @@ The project combines business-oriented exploratory analysis with a leakage-aware
 - Residual Analysis
 - Actual vs Predicted Analysis
 
+
 ## Model Comparison
 
 | Model | Cross-Validated R² |
@@ -137,23 +210,25 @@ The project combines business-oriented exploratory analysis with a leakage-aware
 | Extra Trees | **0.546** |
 | Linear Regression | **0.545** |
 
+
 The interactive dashboard also includes a browser-based revenue scenario estimator derived from the trained Ridge Regression model.
+
 
 ## Project Links
 
-**📂 Project Folder**
+📂 **Project Folder**
 
 [retail-store-sales-analysis](./retail-store-sales-analysis)
 
-**🌐 Live Dashboard**
+
+🌐 **Live Dashboard**
 
 https://mr-amirasgari.github.io/kaggle-data-science-projects/retail-store-sales-analysis/
 
 ---
-
 # 🧠 Skills Demonstrated
 
-Across the projects, this repository demonstrates practical experience with:
+Across these projects, this repository demonstrates practical experience with:
 
 - Data Cleaning
 - Data Preparation
@@ -164,6 +239,7 @@ Across the projects, this repository demonstrates practical experience with:
 - Classification
 - Regression
 - Imbalanced Learning
+- SMOTE
 - Model Evaluation
 - Cross-Validation
 - Feature Scaling
@@ -171,9 +247,12 @@ Across the projects, this repository demonstrates practical experience with:
 - Label Encoding
 - Data Leakage Prevention
 - Business-Oriented Interpretation
+- Explainable Machine Learning
+- SHAP Analysis
 - Interactive Data Visualization
 - Browser-Side Model Demonstrations
 - Reproducible Machine Learning Workflows
+- Dashboard Development
 - GitHub Pages Deployment
 - CI/CD with GitHub Actions
 
@@ -189,7 +268,8 @@ Across the projects, this repository demonstrates practical experience with:
 `SciPy`  
 `Scikit-learn`  
 `XGBoost`  
-`imbalanced-learn`
+`imbalanced-learn`  
+`SHAP`
 
 ## Data Visualization
 
@@ -215,6 +295,7 @@ Across the projects, this repository demonstrates practical experience with:
 
 ```text
 kaggle-data-science-projects/
+
 │
 ├── .github/
 │   └── workflows/
@@ -244,11 +325,13 @@ kaggle-data-science-projects/
 │   ├── *.ipynb
 │   └── ...
 │
+├── diabetes-hospital-readmission-analysis/
+│   ├── dashboard/
+│   ├── diabetes-hospital-readmission.ipynb
+│   ├── README.md
+│   └── requirements.txt
+│
 └── README.md
-```
-
----
-
 # 🌐 Interactive Portfolio
 
 All dashboards are automatically built and deployed through GitHub Actions.
@@ -257,13 +340,20 @@ All dashboards are automatically built and deployed through GitHub Actions.
 
 https://mr-amirasgari.github.io/kaggle-data-science-projects/
 
+
 ## 💳 Loan Credit Analysis
 
 https://mr-amirasgari.github.io/kaggle-data-science-projects/loan-credit-analysis/
 
+
 ## 🏪 Retail Store Sales Analysis
 
 https://mr-amirasgari.github.io/kaggle-data-science-projects/retail-store-sales-analysis/
+
+
+## 🏥 Diabetes Hospital Readmission Prediction
+
+https://mr-amirasgari.github.io/kaggle-data-science-projects/diabetes-hospital-readmission-analysis/
 
 ---
 
@@ -290,7 +380,10 @@ Future projects will progressively introduce more advanced topics such as:
 
 **Amir Asgari**
 
-GitHub: [@mr-amirasgari](https://github.com/mr-amirasgari)
+GitHub:
+
+https://github.com/mr-amirasgari
+
 
 ---
 
