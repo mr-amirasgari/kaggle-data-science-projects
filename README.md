@@ -6,7 +6,7 @@ Each project is developed beyond a simple notebook. The goal is to demonstrate t
 
 ---
 
-# 🚀 Projects
+# 🚀Projects
 
 | Project | Focus | Highlights | Live Demo |
 |---|---|---|---|
